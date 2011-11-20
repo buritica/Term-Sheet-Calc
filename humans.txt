@@ -3,10 +3,15 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+	Andrés Barreto
+	Site: http://termsheetcalc.com
+	Twitter: @andresbarreto
+	Location: NYC
+
+	Juan Pablo Buriticá
+  Site: http://termsheetcalc.com
+  Twitter: @buritica
+  Location: NYC
 
 /* THANKS */
   Names (& URL):
