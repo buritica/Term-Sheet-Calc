@@ -42,7 +42,7 @@ app.calculate = function(){
 
 app.showResults = function(){
 	$('#pricepershare').val(app.outputs.pricePerShare.toFixed(2));
-	$('#postmoney').val(app.outputs.postMoney.toFixed(2));
+	$('#postmoney').val(app.outputs.postMoney);
 	$('#optionpoolresults').val(app.utils.toPercentage(app.inputs.optionPool));
 	$('#preferredowned').val(app.utils.toPercentage(app.outputs.preferredOwnership).toFixed(2));
 	$('#commonowned').val(app.utils.toPercentage(app.outputs.commonOwnership).toFixed(2));
