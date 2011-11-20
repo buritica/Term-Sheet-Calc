@@ -7,9 +7,10 @@ body{
 	font-size: 1.3em;
 	line-height: 1.3em;
 	font-family: 'Fjord One', serif;
+	padding: 60px 0 0;
 }
 #main{
-	
+	display:none;
 	input[type="number"]{
 		border: 1px solid #000;
 		border-width: 0 0 1px 0;
@@ -20,7 +21,7 @@ body{
 		width: 120px;
 		font-family: 'Fjord One', serif;
 		
-		&#optionpool, &#optionpoolresults{
+		&.percent{
 			text-align: right;
 			width: 30px;
 		}
@@ -63,24 +64,39 @@ body{
 		padding: 12px 7px;
 		font-size: .7em;
 		display: none;
+		text-align: center;
 	}
 
 /*iphone*/
-@media only screen and (max-device-width: 480px) {
-	
+@media only screen and (max-device-width: 480px) and (min-device-width: 320px) {
+
 	p{
 		width: 96%;
 		margin: 10px auto;
 		
 		&#inputs{
-			margin: 60px auto 20px;
+			margin: 0px auto 20px;
 		}
 	}
 	
 }
 
 /*ipad*/
-@media only screen and (min-device-width: 768px) {
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) {
+	body{
+		width: 50%;
+		margin: 0 auto;
+		padding-top: 60px;
+	}
 
+	p{
+		margin: 10px auto;
+		line-height: 1.5em;
+	}
+}
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px){
+	#main{
+		display: block;
+	}
 }

@@ -12,18 +12,20 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
+  <title>TermSheetCalc</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+	<link rel="apple-touch-startup-image" href="./startup.png" />
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?2">
   <link href='http://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -38,10 +40,10 @@
   <div role="main" id="main">
 		<p id="inputs">
 			I am raising $<input id="investment" type="number" name="" id="" placeholder="0.00"/> at a $<input id="premoney" type="number" name="" id="" placeholder="0.00" /> pre-money valuation,
-			with a <input id="optionpool" type="number" name="" id="" placeholder="0"/> % option pool. Our total common shares are <input id="commonstock" type="number" name="" id="" placeholder="0"/>.
+			with a <input id="optionpool"  class="percent" type="number" name="" id="" placeholder="0"/> % option pool. Our total common shares are <input id="commonstock" type="number" name="" id="" placeholder="0"/>.
 		</p>
-		<p id="results">The price per share is $<input type="number" id="pricepershare"></input> based on a post-money valuation of $<input type="number" id="postmoney"></input>, including an option pool of <input type="number" id="optionpoolresults"></input>%.
-			 The investors will own <input type="number" id="preferredowned"></input>% and the founders will own <input type="number" id="commonowned"></input>%.
+		<p id="results">The price per share is $<input type="number" id="pricepershare"></input> based on a post-money valuation of $<input type="number" id="postmoney"></input>, including an option pool of <input type="number" id="optionpoolresults"  class="percent"></input>%.
+			 The investors will own <input type="number" id="preferredowned"  class="percent"></input>% and the founders will own <input type="number" id="commonowned" class="percent"></input>%.
 		</p>
 		<a href="#" id="calculate" data-link="calculate">Calculate</a>
 		<a href="#" id="clear" data-link="clear">Clear</a>
@@ -60,7 +62,7 @@
 
   <!-- scripts concatenated and minified via build script -->
   <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="js/script.js?1"></script>
   <!-- end scripts -->
 
 
