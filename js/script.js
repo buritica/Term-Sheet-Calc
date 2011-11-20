@@ -16,7 +16,8 @@ var app = {
 		commonOwnership: 0,
 		preferredOwnership: 0,
 		effectivePreMoney: 0,
-	}
+	},
+	calculated: false,
 }
 
 app.calculate = function(){
@@ -33,11 +34,7 @@ app.calculate = function(){
 	out.commonOwnership = 1 - out.preferredOwnership - inp.optionPool;
 	out.effectivePreMoney = out.pricePerShare * inp.commonStock;
 
-	console.log('post money: ' + out.postMoney);
-	console.log('pps: ' + out.pricePerShare.toFixed(2)) ;
-	console.log('common own: ' + app.utils.toPercentage(out.commonOwnership).toFixed(2));
-	console.log('preferred own: ' + app.utils.toPercentage(out.preferredOwnership).toFixed(2));
-	console.log('effective premoney: ' + out.effectivePreMoney.toFixed(2));
+	app.calculated = true;
 	//return results
 	
 	app.showResults();
@@ -91,9 +88,22 @@ app.utils = {
 	}
 }
 
+app.refreshValues = function(){
+	$('input').blur(function(){
+		if(app.calculated){
+			app.calculate();
+		}
+	});
+}
+
 $('a').click(function(){
-	if($(this).attr('data-link') == 'calculate'){
+	var dataLink = $(this).attr('data-link');
+	if( dataLink == 'calculate'){
 		app.calculate();
+	}
+	
+	if(dataLink == 'clear'){
+		$('input').val('');
 	}
 	return false;
 });
@@ -103,4 +113,5 @@ $(document).ready(function(){
 	$('body').bind('touchmove', function(e){
 		// e.preventDefault();
 	});
+	// app.refreshValues();
 })
