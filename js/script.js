@@ -7,7 +7,7 @@ var app = {
 		preMoney: 0,
 		commonStock:0,
 		optionPool: 0,
-		investment: 0,
+		investment: 0
 	},
 	outputs: {
 		postMoney: 0,
@@ -15,9 +15,9 @@ var app = {
 		pricePerShare: 0,
 		commonOwnership: 0,
 		preferredOwnership: 0,
-		effectivePreMoney: 0,
+		effectivePreMoney: 0
 	},
-	calculated: false,
+	calculated: false
 }
 
 app.calculate = function(){
