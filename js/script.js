@@ -2,7 +2,7 @@
 for @termsheetcalc
 */
 
-if (screen.width >= 699) {
+if (screen.width >= 768) {
 document.location = "http://termsheetcalc.com";
 }
 var app = {
