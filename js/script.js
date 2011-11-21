@@ -2,6 +2,9 @@
 for @termsheetcalc
 */
 
+if (screen.width >= 699) {
+document.location = "http://termsheetcalc.com";
+}
 var app = {
 	inputs: {
 		preMoney: 0,
@@ -113,5 +116,7 @@ $(document).ready(function(){
 	$('body').bind('touchmove', function(e){
 		// e.preventDefault();
 	});
-	// app.refreshValues();
+	app.refreshValues();
+	
+
 })
